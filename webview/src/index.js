@@ -9,7 +9,8 @@ const btnSave = $('#save');
 
 let config;
 
-btnSave.addEventListener('click', () => takeSnap(config));
+// btnSave.addEventListener('click', () => takeSnap(config));
+btnSave.addEventListener('click', () => takeSnap({ ...config, shutterAction: 'copy' }));
 
 document.addEventListener('copy', () => takeSnap({ ...config, shutterAction: 'copy' }));
 
